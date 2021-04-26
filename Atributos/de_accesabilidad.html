@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesabilidad</title>
+
+    <!-- La accesabilidad es poder hacer una pagina web para todo el mundo.Ej: Navegadores por voz para no videntes-->
+</head>
+<body>
+    <!-- Tabindex: Para movernos con el tabulador a traves de los campos de un formulario, titulos, parrafos, etc.. -->
+    <p tabindex="1">Párrafo 1</p>
+    <p tabindex="3">Párrafo 2</p>
+    <p tabindex="2">Párrafo 3</p>
+
+    <!-- En crhome se descarga una extensión (chromeVox Classic)para no videntes en donde se escucha una voz que le indica el contenido de la pagina y describe cada etiqueta. El 'aria-label' le proporciona en voz esa descipción que pusimos y el 'role' le indica que etiqueta es.-->
+    <a href="#" aria-label="Leer mas sobre bla, bla...">Leer más</a>
+    
+</body>
+</html>

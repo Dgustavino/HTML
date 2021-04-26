@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get vs post</title>
+</head>
+<!-- 
+    GET y POST son dos métodos del protocolo HTTP que podemos ver como formas de envío de datos a través de internet. Tanto GET como POST son muy conocidos debido a su uso en formularios.
+
+    GET: Metodo por defecto para enviar formularios(Los datos son visibles en la barra URL)
+        -Permanecen en el historial del navegador.
+        -Hay restriccion en la longuitud de los caracteres enviados.
+        -Solo admite caracteres ASC-II.
+        -vulnearble a ataques de hackeo.
+
+    POST: Los datos se transmiten igualmente, pero no son visibles en la url y sólo pueden ser recuperados a través de código de programación.
+        -Mayor seguridad porque los datos no se ven y no quedan en el historial.
+        -No tiene restriccion en la longuitud de caracteres.
+        -Se considera preferible para envios de datos sensibles.
+        -No tiene restriccion de caracteres(se pueden enviar texto, binarios y archivos)
+        -Se considera preferible para disparar acciones.
+        -Menos vulnerable a ataques.
+ -->
+<body>
+    <form action="enviar.html" method="POST">
+        <label for="name">Nombre</label>
+
+        <!-- Se ocupa el name para poder enviar los formularios -->
+        <input type="text" id="name" name="name">
+        <label for="surname">Apellido</label>
+
+        <!-- Se ocupa el name para poder enviar los formularios -->
+        <input type="text" id="surname" name="surname">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

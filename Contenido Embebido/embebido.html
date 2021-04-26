@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Embebido</title>
+</head>
+<!-- 
+    El contenido embebido es lo que traemos de afuera para mostrar en las paginas.
+    -Imagenes
+    -Iconos
+    -Audio
+    -Video
+    -Iframes
+ -->
+
+                   <!-- IMÁGENES -->
+<!-- Vectoriales(Preferiblemente usar estos por peso y resolucion)
+        -SVG
+        
+    Mapa de bits
+        -jpg
+        -png (8 y 24 para trasparencias)
+        -gif
+        -webp(las mas livianas, la mejor opcion despues de los SVG)
+  -->
+
+<!-- Estilo CSS para que la imagen no se desborde -->
+  <style>
+    video,
+    img {
+        max-width: 100%;
+        /* width: 30px; Cambia tamaño de la imagen*/
+    }
+
+</style>
+
+<!-- Para responsive(Movil,Tablet,etc...) -->
+<!-- 
+    DPR (Device Pixel Ratio)
+        Es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles que tenemos disponibles para "pintar" contenido
+    DPR = pixeles reales / pixeles disponibles
+    DPR = 1x -> Escritorio | 2x,3x -> Moviles
+
+    NOTA: Para usar imagenes para Moviles lo mejor es reducir el tamaño antes de usuarla en el HTML y no reducirla con HTML o CSS. Se puede reducir con Paint.
+ -->
+<body>
+    <h1>Contenido embebido</h1>
+   
+    <img src="assets/Images/gato.jpg" alt="Gato Amarillo">
+        <!-- El atributo alt se utiliza para que en el caso de que la imagen no se cargue, nos muestre por lo menos la descripcion de lo que se queria mostrar -->
+
+        <!-- NOTA: Para los SVG podemos mostrarlo con el metodo normal, pero si queremos modificarlo en tiempo real con CSS y JS, lo mejor es hacerlo con el metodo de pegar todo el codigo.svg -->
+
+        <!-- Para la imagen movil usamos 'srcset y le especificamos el DPR',podemos cargar cuantas imagenes queramos en la misma etiqueta 'srcset' usando comas.-->
+    <img srcset="assets/Images/gatoMovil.jpg 2x" alt="Gato Movil">
+    <!-- Internet Explorer no soporta 'srcset' -->
+    <!-- **************************************************************************************************** -->
+
+    <!-- Etiqueta mas moderna, trae mas opciones -->
+     <!-- <picture>
+         <source srcset="
+            assets/Images/gato2.png,
+            assets/Images/gato.jpg"> 
+
+     Debe ponerse la etiqueta 'src' de respaldo por si el navegador u otra razón no sirviera 'srcset'
+        <img src="assets/Images/gato.jpg" alt="jkjkkj">
+        </picture> -->
+<!-- **************************************************************************************************** -->
+
+        <!-- Debe llevar el atributo controls para que funcione -->
+    <audio src="assets/Audio/Aventura - Amor De Madre.mp3" controls></audio>
+
+    <!-- muted: se reproduce silenciado | autoplay: se reproduce solo | loop: se reproduce nuevamente al terminar | poster: Pone imagen de inicio antes de reproducir el video(con autoplay casi no se aprecia) -->
+    <video src="assets/Video/gogo.MP4" controls muted loop
+        poster="assets/Images/gato2.png"></video>
+   
+        <!-- iframe es coger una web o pagina e introducirla dentro de la nuestra (SON MUY PESADOS)-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0e_lA0HLI3s"></iframe>
+
+    <h2>Gatos</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eos ea ab in, quasi fugiat tempora totam
+        voluptatem veritatis nisi aliquid nesciunt asperiores repudiandae natus labore, amet officia perspiciatis quia.
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eos ea ab in, quasi fugiat tempora totam
+        voluptatem veritatis nisi aliquid nesciunt asperiores repudiandae natus labore, amet officia perspiciatis quia.
+    </p>
+
+    <!-- Etiqueta para contenido relacionado en un section o article. Se pueden poner images, tablas, graficos, citas, trozo de codigo, etc...-->
+    <figure>
+
+        <img src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="gato tumbado">
+        <figcaption>Gato común tumbado</figcaption>
+
+    </figure>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eos ea ab in, quasi fugiat tempora totam
+        voluptatem veritatis nisi aliquid nesciunt asperiores repudiandae natus labore, amet officia perspiciatis quia.
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eos ea ab in, quasi fugiat tempora totam
+        voluptatem veritatis nisi aliquid nesciunt asperiores repudiandae natus labore, amet officia perspiciatis quia.
+    </p>
+</body>
+</html>
